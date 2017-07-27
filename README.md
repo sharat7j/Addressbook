@@ -1,7 +1,78 @@
 # Addressbook
+Service to manage contacts in an address book
+Design	and	implement	a	RESTFUL	address	book in	Java:
+This	address	book	stores	contact	information	for	a	given	user	and	allows	this	
+information	to	be	retrieved	as	well.	The	contact	information	to	store	is	first	name,	
+last	name,	phone	number,	address,	email,	and	last	contact	date.	The	interface	
+should	also	support	updating	and	deleting	this	contact	information.	This	data	can	
+simply	be	stored	in	memory	and	does	not	have	to	persist	through	application	
+restarts.	
+Please	provide	unit/integration	tests	that	test	the	endpoints.
 
-To build the project from command line use command <br/>
-mvn clean install
 
-To run the project use the command <br/>
-java -jar Addressbook/target/1-1.0-SNAPSHOT.jar
+     Bonus:	
+     Design	a	RESTFUL	search/filtering	interface	for	these	use	cases:
+     Show	all	the	contacts	from	a	list	of	states
+     Show	all	the	contacts	last	contacted	in	a	date	range
+     Show	all	the	contacts	from	a	given	area	code	assuming	the	phone	number	
+     is	in	the	format(xxx-xxx-xxxx)
+
+## Summary
+This is a application built using spring boot and maven that provides APIs to manage contacts in an address book. This service uses an In-memory database.
+
+The service supports most of the CRUD operations and allows for managing contacts in an address book.
+The basic requirement is complete. For the bonus, only the "Show	all	the	contacts	from	a	list	of	states" is complete.
+
+
+### Tech Stack:
+
+Spring boot
+Spring JPA in memory database
+Hibernate based ORM
+Junit testing
+Swagger API documentation
+
+## Requirements
+
+You will need
+
+maven to build this project to build the jar.
+Postman client to easily download and test the integration test suite
+
+## Deployment
+
+To deploy :
+
+Jar: The jar can be built by using maven. Once built we can run the jar as indicated below
+
+
+      $> mvn clean install
+      $> java -jar Addressbook/target/1-1.0-SNAPSHOT.jar
+      
+      
+The service would be deployed at localhost:8080
+{code}
+
+## API docs
+
+The API documentation is powered by swagger and can be located at /target/generated/swagger.json
+
+To generate a html version of the API documentation you can use bootprint
+
+
+
+      npm install -g bootprint
+      npm install bootprint-swagger 
+      bootprint swagger target/generated/swagger.json docs
+      
+You'll see the index.html file created under the docs folder with all the css
+
+## Integration test suite
+
+For integration testing a postman collection is provided. Please use vehicle-update.postman_collection file to import the collection into postman and run the collection.
+
+To import a collection into postman refer: https://www.getpostman.com/docs/collections To run the suite from the collection refer: https://www.getpostman.com/docs/running_collections
+
+
+
+
