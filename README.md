@@ -69,7 +69,7 @@ You'll see the index.html file created under the docs folder with all the css
 
 ## Integration test suite
 
-For integration testing a postman collection is provided. Please use vehicle-update.postman_collection file to import the collection into postman and run the collection.
+For integration testing a postman collection is provided. Please use addressbook.postman_collection file to import the collection into postman and run the collection.
 
 To import a collection into postman refer: https://www.getpostman.com/docs/collections To run the suite from the collection refer: https://www.getpostman.com/docs/running_collections
 
