@@ -30,7 +30,6 @@ public class Contact {
     @Column
     private String lastName;
     @Column
-
     private String phoneNumber;
     @Column
     private String streetAddress;
