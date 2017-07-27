@@ -10,7 +10,7 @@ restarts.
 Please	provide	unit/integration	tests	that	test	the	endpoints.
 
 
-     Bonus:	
+Bonus:	
      Design	a	RESTFUL	search/filtering	interface	for	these	use	cases:
      Show	all	the	contacts	from	a	list	of	states
      Show	all	the	contacts	last	contacted	in	a	date	range
