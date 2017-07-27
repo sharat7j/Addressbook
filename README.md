@@ -36,7 +36,7 @@ Swagger API documentation
 
 You will need<br/>
 
-1)maven to build this project to build the jar.<br/>
+1) Maven to build this project to build the jar.<br/>
 2) Postman client to easily download and test the integration test suite
 
 ## Deployment
