@@ -1,0 +1,11 @@
+com/addressbook/Application.class
+com/addressbook/exceptions/ControllerExceptionHandler.class
+com/addressbook/exceptions/InvalidDataException.class
+com/addressbook/service/ContactService.class
+com/addressbook/exceptions/UniquenessException.class
+com/addressbook/repository/ContactRepository.class
+com/addressbook/model/Contact.class
+com/addressbook/exceptions/MissingDataException.class
+com/addressbook/controller/AddressBookController.class
+com/addressbook/exceptions/BaseException.class
+com/addressbook/request/ContactRequest.class

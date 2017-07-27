@@ -1,0 +1,239 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This API is used to create,update and delete entries in an address book",
+    "version" : "v1",
+    "title" : "AddressBook API documentation",
+    "contact" : {
+      "name" : "Palo alto Net",
+      "email" : "DL-ENG-V-UPDATE@pan.com"
+    }
+  },
+  "basePath" : "/",
+  "tags" : [ {
+    "name" : "Contacts Controller"
+  } ],
+  "paths" : {
+    "/v1/contact" : {
+      "post" : {
+        "tags" : [ "Contacts Controller" ],
+        "summary" : "Create a new contact",
+        "description" : "Create a new contact out that is unique by email",
+        "operationId" : "createContact",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "ContactRequest payload as JSON for creation of a Contact",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/ContactRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Contact"
+            }
+          },
+          "400" : {
+            "description" : "Bad request if either a contact already exists with the same phone number  if the name attribute is empty"
+          }
+        }
+      },
+      "delete" : {
+        "tags" : [ "Contacts Controller" ],
+        "summary" : "Delete an existing contact",
+        "description" : "Remove an exisitng contact ",
+        "operationId" : "deleteContact",
+        "parameters" : [ {
+          "name" : "id",
+          "in" : "query",
+          "required" : true,
+          "type" : "integer",
+          "format" : "int64"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success"
+          },
+          "400" : {
+            "description" : "Bad request if id not present "
+          }
+        }
+      }
+    },
+    "/v1/contact/update" : {
+      "post" : {
+        "tags" : [ "Contacts Controller" ],
+        "summary" : "Update contact",
+        "description" : "Update contact that exists on unique phone number",
+        "operationId" : "updateContact",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "description" : "ContactRequest payload as JSON for updating Contact",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/ContactRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/Contact"
+            }
+          },
+          "400" : {
+            "description" : "Bad request if either a contact already exists with the  same number  "
+          }
+        }
+      }
+    },
+    "/v1/contacts" : {
+      "get" : {
+        "tags" : [ "Contacts Controller" ],
+        "summary" : "list all Contacts in the system",
+        "description" : "Paginated list of all Contacts in the system",
+        "operationId" : "listContacts",
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Pageable"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/Contact"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/contacts/state/{state}" : {
+      "get" : {
+        "tags" : [ "Contacts Controller" ],
+        "summary" : "list all Contacts in a state the system",
+        "description" : "Paginated list of all Contacts in a state in the system",
+        "operationId" : "listContactsInState",
+        "parameters" : [ {
+          "name" : "state",
+          "in" : "path",
+          "required" : true,
+          "type" : "string"
+        }, {
+          "in" : "body",
+          "name" : "body",
+          "required" : false,
+          "schema" : {
+            "$ref" : "#/definitions/Pageable"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/Contact"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Contact" : {
+      "type" : "object",
+      "properties" : {
+        "id" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "streetAddress" : {
+          "type" : "string"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "lastContactDate" : {
+          "type" : "string"
+        }
+      }
+    },
+    "ContactRequest" : {
+      "type" : "object",
+      "properties" : {
+        "firstName" : {
+          "type" : "string"
+        },
+        "lastName" : {
+          "type" : "string"
+        },
+        "phoneNumber" : {
+          "type" : "string"
+        },
+        "streetAddress" : {
+          "type" : "string"
+        },
+        "state" : {
+          "type" : "string"
+        },
+        "email" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "integer",
+          "format" : "int64"
+        },
+        "lastContactDate" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Pageable" : {
+      "type" : "object",
+      "properties" : {
+        "offset" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "sort" : {
+          "$ref" : "#/definitions/Sort"
+        },
+        "pageNumber" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "pageSize" : {
+          "type" : "integer",
+          "format" : "int32"
+        }
+      }
+    },
+    "Sort" : {
+      "type" : "object"
+    }
+  }
+}
