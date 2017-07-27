@@ -1,6 +1,6 @@
 # Addressbook
-Service to manage contacts in an address book
-Design	and	implement	a	RESTFUL	address	book in	Java:
+Service to manage contacts in an address book.<br/>
+Design	and	implement	a	RESTFUL	address	book in	Java:<br/>
 This	address	book	stores	contact	information	for	a	given	user	and	allows	this	
 information	to	be	retrieved	as	well.	The	contact	information	to	store	is	first	name,	
 last	name,	phone	number,	address,	email,	and	last	contact	date.	The	interface	
