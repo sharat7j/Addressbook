@@ -21,7 +21,7 @@ Bonus:<br/>
 This is a application built using spring boot and maven that provides APIs to manage contacts in an address book. This service uses an In-memory database.
 
 The service supports most of the CRUD operations and allows for managing contacts in an address book.
-The basic requirement is complete. For the bonus, only the "Show	all	the	contacts	from	a	list	of	states" is complete.
+The basic requirement is complete. For the bonus, only the "Show	all	the	contacts	based on state" is complete.
 
 
 ### Tech Stack:
