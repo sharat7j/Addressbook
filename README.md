@@ -26,11 +26,11 @@ The basic requirement is complete. For the bonus, only the "Show	all	the	contact
 
 ### Tech Stack:
 
-Spring boot
-Spring JPA in memory database
-Hibernate based ORM
-Junit testing
-Swagger API documentation
+Spring boot.
+Spring JPA in memory database.
+Hibernate based ORM.
+Junit testing.
+Swagger API documentation.
 
 ## Requirements
 
