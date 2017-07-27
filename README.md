@@ -10,7 +10,7 @@ restarts.
 Please	provide	unit/integration	tests	that	test	the	endpoints.
 
 
-Bonus:	
+Bonus:<br/>	
      Design	a	RESTFUL	search/filtering	interface	for	these	use	cases:<br/>
      Show	all	the	contacts	from	a	list	of	states.<br/>
      Show	all	the	contacts	last	contacted	in	a	date	range.<br/>
@@ -34,10 +34,10 @@ Swagger API documentation
 
 ## Requirements
 
-You will need
+You will need<br/>
 
-maven to build this project to build the jar.
-Postman client to easily download and test the integration test suite
+1)maven to build this project to build the jar.<br/>
+2) Postman client to easily download and test the integration test suite
 
 ## Deployment
 
