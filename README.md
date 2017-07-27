@@ -11,9 +11,9 @@ Please	provide	unit/integration	tests	that	test	the	endpoints.
 
 
 Bonus:	
-     Design	a	RESTFUL	search/filtering	interface	for	these	use	cases:
-     Show	all	the	contacts	from	a	list	of	states
-     Show	all	the	contacts	last	contacted	in	a	date	range
+     Design	a	RESTFUL	search/filtering	interface	for	these	use	cases:<br/>
+     Show	all	the	contacts	from	a	list	of	states.<br/>
+     Show	all	the	contacts	last	contacted	in	a	date	range.<br/>
      Show	all	the	contacts	from	a	given	area	code	assuming	the	phone	number	
      is	in	the	format(xxx-xxx-xxxx)
 
